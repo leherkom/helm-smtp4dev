@@ -1,13 +1,8 @@
 ---
-name: Helm Release
+name: Release Chart
 
 on:
-  workflow_dispatch:
-  workflow_run:
-    workflows:
-      - Lint and Test Charts
-    types:
-      - completed
+  push:
     branches:
       - main
 
@@ -15,13 +10,17 @@ jobs:
   release:
     permissions:
       contents: write
-    runs-on: gha-runners
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
     steps:
-      - name: Helm Release
-        uses: IMIO/gha/helm-release-notify@v3.9.3
+      - name: Checkout
+        uses: actions/checkout@v6
         with:
-          TARGET_DIR: smtp4dev
-          MATTERMOST_WEBHOOK_URL: ${{ secrets.COMMON_MATTERMOST_WEBHOOK_URL }}
-          APP_ID: ${{ secrets.APP_ID }}
-          PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+          fetch-depth: 0
+      - name: Configure Git
+        run: |
+          git config user.name "$GITHUB_ACTOR"
+          git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
+      - name: Run chart-releaser
+        uses: helm/chart-releaser-action@v1.7.0
+        env:
+          CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
