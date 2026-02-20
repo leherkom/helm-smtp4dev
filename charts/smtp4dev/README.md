@@ -1,7 +1,5 @@
 # Helm Chart for smtp4dev
 
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) ![version](https://img.shields.io/github/tag/IMIO/helm-smtp4dev.svg?label=release) ![test](https://github.com/IMIO/helm-smtp4dev/actions/workflows/test.yaml/badge.svg) ![release](https://github.com/IMIO/helm-smtp4dev/actions/workflows/release.yaml/badge.svg)
-
 ## Introduction
 
 This [Helm](https://helm.sh/) chart installs [smtp4dev](https://github.com/rnwood/smtp4dev) in a [Kubernetes](https://kubernetes.io) cluster.
