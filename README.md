@@ -18,7 +18,8 @@ This repository is largely based off of [IMIO's helm-smtp4dev repository](https:
 ### Add Helm repository
 
 ```bash
-# TODO
+helm repo add leherkom-smtp4dev https://leherkom.github.io/helm-smtp4dev
+helm repo update
 ```
 
 ### Configure the chart
