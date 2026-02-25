@@ -74,13 +74,13 @@ spec:
             {{- end }}
           ports:
             - name: http
-              containerPort: {{ .Values.service.port }}
+              containerPort: {{ .Values.service.port | default 80 }}
               protocol: TCP
             - name: smtp
-              containerPort: 25
+              containerPort: {{ .Values.smtp4dev.ServerOptions__ImapPort | default 25 }}
               protocol: TCP
             - name: imap
-              containerPort: 143
+              containerPort: {{ .Values.smtp4dev.ServerOptions__ImapPort | default 143 }}
               protocol: TCP
           livenessProbe:
             httpGet:
