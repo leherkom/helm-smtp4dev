@@ -8,15 +8,15 @@ spec:
   type: {{ .Values.service.type }}
   ports:
     - port: {{ .Values.service.port | default 80 }}
-      targetPort: {{ .Values.service.port | default 80 }}
+      targetPort: http
       protocol: TCP
       name: http
     - port: {{ .Values.smtp4dev.ServerOptions__ImapPort | default 25 }}
-      targetPort: {{ .Values.smtp4dev.ServerOptions__ImapPort | default 25 }}
+      targetPort: smtp
       protocol: TCP
       name: smtp
     - port: {{ .Values.smtp4dev.ServerOptions__ImapPort | default 143 }}
-      targetPort: {{ .Values.smtp4dev.ServerOptions__ImapPort | default 143 }}
+      targetPort: imap
       protocol: TCP
       name: imap
   selector:
