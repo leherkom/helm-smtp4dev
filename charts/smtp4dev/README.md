@@ -1,10 +1,11 @@
 # Helm Chart for smtp4dev
 
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) ![version](https://img.shields.io/github/tag/IMIO/helm-smtp4dev.svg?label=release) ![test](https://github.com/IMIO/helm-smtp4dev/actions/workflows/test.yaml/badge.svg) ![release](https://github.com/IMIO/helm-smtp4dev/actions/workflows/release.yaml/badge.svg)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) ![version](https://img.shields.io/github/tag/leherkom/helm-smtp4dev.svg?label=release) ![release](https://github.com/leherkom/helm-smtp4dev/actions/workflows/release.yaml/badge.svg)
 
 ## Introduction
 
 This [Helm](https://helm.sh/) chart installs [smtp4dev](https://github.com/rnwood/smtp4dev) in a [Kubernetes](https://kubernetes.io) cluster.
+This repository is largely based off of [IMIO's helm-smtp4dev repository](https://github.com/IMIO/helm-smtp4dev), but includes some changes for running the smtp4dev server on a port other than 25.
 
 ## Prerequisites
 
@@ -17,8 +18,7 @@ This [Helm](https://helm.sh/) chart installs [smtp4dev](https://github.com/rnwoo
 ### Add Helm repository
 
 ```bash
-helm repo add imio https://imio.github.io/helm-charts
-helm repo update
+# TODO
 ```
 
 ### Configure the chart
@@ -30,13 +30,13 @@ Feel free to modify the options in the [values.yaml file](values.yaml) before in
 ### Install the chart
 
 ```bash
-helm install [RELEASE_NAME] imio/smtp4dev
+helm install [RELEASE_NAME] leherkom/smtp4dev
 ```
 
 or by cloning this repository:
 
 ```bash
-git clone https://github.com/imio/helm-smtp4dev.git
+git clone https://github.com/leherkom/helm-smtp4dev.git
 cd helm-smtp4dev
 helm install smtp4dev . -f values.yaml --namespace smtp4dev --create-namespace
 ```
