@@ -11,7 +11,7 @@ spec:
       targetPort: http
       protocol: TCP
       name: http
-    - port: {{ .Values.smtp4dev.ServerOptions__ImapPort | default 25 }}
+    - port: {{ .Values.smtp4dev.RelayOptions__SmtpPort | default 25 }}
       targetPort: smtp
       protocol: TCP
       name: smtp

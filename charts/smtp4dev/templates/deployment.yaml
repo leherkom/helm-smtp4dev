@@ -77,7 +77,7 @@ spec:
               containerPort: {{ .Values.service.port | default 80 }}
               protocol: TCP
             - name: smtp
-              containerPort: {{ .Values.smtp4dev.ServerOptions__ImapPort | default 25 }}
+              containerPort: {{ .Values.smtp4dev.RelayOptions__SmtpPort | default 25 }}
               protocol: TCP
             - name: imap
               containerPort: {{ .Values.smtp4dev.ServerOptions__ImapPort | default 143 }}
