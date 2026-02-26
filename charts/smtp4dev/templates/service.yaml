@@ -7,15 +7,15 @@ metadata:
 spec:
   type: {{ .Values.service.type }}
   ports:
-    - port: {{ .Values.service.port }}
+    - port: {{ .Values.service.port | default 80 }}
       targetPort: http
       protocol: TCP
       name: http
-    - port: 25
+    - port: {{ .Values.smtp4dev.RelayOptions__SmtpPort | default 25 }}
       targetPort: smtp
       protocol: TCP
       name: smtp
-    - port: 143
+    - port: {{ .Values.smtp4dev.ServerOptions__ImapPort | default 143 }}
       targetPort: imap
       protocol: TCP
       name: imap

@@ -2,8 +2,8 @@ apiVersion: v2
 name: smtp4dev
 description: A Helm chart for helm-smtp4dev
 type: application
-version: 0.1.1
-appVersion: "3.15.0"
+version: 0.1.2
+appVersion: "3.14.0"
 keywords:
   - smtp4dev
   - fake smtp email server
