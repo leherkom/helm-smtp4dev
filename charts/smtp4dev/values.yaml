@@ -13,6 +13,7 @@ image:
 # smtp4dev configuration (env variables)
 smtp4dev:
   ServerOptions__BasePath: /smtp4dev
+  ServerOptions__Port: 25
   ServerOptions_Urls: http://*:80
   ServerOptions__Hostname: smtp4dev
   ServerOptions__LockSettings: true

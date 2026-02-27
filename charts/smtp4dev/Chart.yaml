@@ -2,7 +2,7 @@ apiVersion: v2
 name: smtp4dev
 description: A Helm chart for helm-smtp4dev
 type: application
-version: 0.1.2
+version: 0.1.3
 appVersion: "3.14.0"
 keywords:
   - smtp4dev

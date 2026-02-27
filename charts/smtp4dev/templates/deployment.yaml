@@ -39,6 +39,8 @@ spec:
           env:
             - name: ServerOptions__BasePath
               value: {{ .Values.smtp4dev.ServerOptions__BasePath | toString | quote }}
+            - name: ServerOptions__Port
+              value: {{ .Values.smtp4dev.ServerOptions__Port | toString | quote }}
             - name: ServerOptions_Urls
               value: {{ .Values.smtp4dev.ServerOptions__Urls | toString | quote }}
             - name: ServerOptions__Hostname
