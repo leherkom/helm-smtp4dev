@@ -79,6 +79,30 @@ ingress:
   #    hosts:
   #      - chart-example.local
 
+# Configure HTTPRoute resources
+route:
+  enabled: false
+  annotations: {}
+  # - name: mygateway
+  #   namespace: gateway-system
+  #   sectionName: https
+  parentRefs: []
+  hostnames: []
+  additionalRules: []
+  filters: []
+  matches:
+    - path:
+        type: PathPrefix
+        value: /
+  # Deploy an additional HTTPRoute which redirects  HTTP traffic to the HTTPS
+  httpRedirect:
+    enabled: false
+    # Refer to the http listener
+    # - name: mygateway
+    #   namespace: gateway-system
+    #   sectionName: http
+    parentRefs: []
+
 # persistence
 persistence:
   enabled: false
