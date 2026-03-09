@@ -3,6 +3,27 @@ entries:
   smtp4dev:
   - apiVersion: v2
     appVersion: 3.14.0
+    created: "2026-03-09T13:54:46.597552606Z"
+    description: A Helm chart for helm-smtp4dev
+    digest: 6c1c672fd9eca574fef1b0882b170f8aa525f6eef1d6123e63ac1177b9c9d9ca
+    icon: https://raw.githubusercontent.com/rnwood/smtp4dev/master/Rnwood.Smtp4dev/ClientApp/public/logo.png
+    keywords:
+    - smtp4dev
+    - fake smtp email server
+    - development
+    maintainers:
+    - name: leherkom
+      url: https://github.com/leherkom/
+    name: smtp4dev
+    sources:
+    - https://github.com/leherkom/helm-smtp4dev
+    - https://github.com/rnwood/smtp4dev
+    type: application
+    urls:
+    - https://github.com/leherkom/helm-smtp4dev/releases/download/smtp4dev-0.1.4/smtp4dev-0.1.4.tgz
+    version: 0.1.4
+  - apiVersion: v2
+    appVersion: 3.14.0
     created: "2026-02-27T08:41:06.685249354Z"
     description: A Helm chart for helm-smtp4dev
     digest: 601848683658d7e25f73dceddb9d91158dcf7b5c59c54a8f1874f944ecd0c884
@@ -85,4 +106,4 @@ entries:
     urls:
     - https://github.com/leherkom/helm-smtp4dev/releases/download/smtp4dev-0.1.0/smtp4dev-0.1.0.tgz
     version: 0.1.0
-generated: "2026-02-27T08:41:06.685263832Z"
+generated: "2026-03-09T13:54:46.597571562Z"
